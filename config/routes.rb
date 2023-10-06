@@ -6,6 +6,10 @@ Rails.application.routes.draw do
 	
 	get "war", to: "war#index"
 	get "countries", to: "countries#index"
+	get "countries/:id", to: "countries#show"
+
+	get "generals", to: "generals#index"
+	get "generals/:id", to: "generals#show"
 
 
 end

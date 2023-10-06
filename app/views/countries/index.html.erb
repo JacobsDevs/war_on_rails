@@ -9,7 +9,7 @@
 	</tr>
 	<% @countries.each do |country| %>
 	<tr>
-		<td><%= country.name %></td>
+		<td><a href="/countries/<%= country.id %>"><%= country.name %></a></td>
 		<td><%= country.alliance %></td>
 		<td><%= country.strength %></td>
 		<td><%= country.active_in_war %></td>

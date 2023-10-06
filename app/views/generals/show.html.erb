@@ -1,0 +1,5 @@
+<h1><%= @general.name %></h1>
+<h2>Victories: <%= @general.victories%></h2>
+<h2>Defeats: <%= @general.defeats%></h2>
+<h3>Status: <%= @general.alive ? "Alive" : "Deceased"%></h3>
+<h3>Proudly Serving: <a href="/countries/<%= @general.country_id%>"><%= Country.find(@general.country_id).name %></a></h3>
