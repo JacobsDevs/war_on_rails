@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_10_06_002639) do
+ActiveRecord::Schema[7.0].define(version: 2023_10_06_010338) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -23,4 +23,16 @@ ActiveRecord::Schema[7.0].define(version: 2023_10_06_002639) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "generals", force: :cascade do |t|
+    t.string "name"
+    t.integer "victories"
+    t.integer "defeats"
+    t.boolean "alive"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.bigint "country_id"
+    t.index ["country_id"], name: "index_generals_on_country_id"
+  end
+
+  add_foreign_key "generals", "countries"
 end

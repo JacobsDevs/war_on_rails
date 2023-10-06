@@ -1,0 +1,20 @@
+<h1>Generals</h1>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Victories</th>
+		<th>Defeats</th>
+		<th>Alive?</th>
+		<th>Country</th>
+	</tr>
+	<% @generals.each do |general| %>
+	<tr>
+		<td><a href="/generals/<%= general.id %>"><%= general.name %></a></td>
+		<td><%= general.victories %></td>
+		<td><%= general.defeats %></td>
+		<td><%= general.alive %></td>
+		<td><a href="/countries/<%= general.country_id%>"><%= Country.find(general.country_id).name %></a></td>
+	</tr>
+	<% end %>
+</table>
