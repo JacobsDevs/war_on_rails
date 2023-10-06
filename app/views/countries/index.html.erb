@@ -1,0 +1,18 @@
+<h1>Countries</h1>
+
+<table>
+	<tr>
+		<th>Name</th>
+		<th>Alliance</th>
+		<th>Strength</th>
+		<th>Active in War?</th>
+	</tr>
+	<% @countries.each do |country| %>
+	<tr>
+		<td><%= country.name %></td>
+		<td><%= country.alliance %></td>
+		<td><%= country.strength %></td>
+		<td><%= country.active_in_war %></td>
+	</tr>
+	<% end %>
+</table>
